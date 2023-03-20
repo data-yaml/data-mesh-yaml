@@ -19,3 +19,4 @@ Three Mappings:
   - physical S3 URIs (Buckets, Keys)
   - logical Quilt+ URIs (Package, Path) 
 
+[Example Configuration File](./data-mesh.yaml)
