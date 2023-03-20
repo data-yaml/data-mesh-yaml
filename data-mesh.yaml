@@ -1,0 +1,19 @@
+data-mesh-yaml: 0.1.0
+info:
+  mesh_name: _Mesh_
+  org_name: _Org_
+  version: 1.0
+principal_tags:
+  _ptag_: "long description"
+resource_tags:
+  _rtag_: "long description"
+claim_map:
+  _claim_:
+    - _ptag_
+uri_map:
+  _uri_:
+    - _rtag_
+policies:
+  _group_:
+    - _policy_
+
