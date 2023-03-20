@@ -1,19 +1,20 @@
 data-mesh-yaml: 0.1.0
 info:
-  mesh_name: _Mesh_
-  org_name: _Org_
+  mesh-name: <Mesh>
+  org-name: <Org>
   version: 1.0
-principal_tags:
-  _ptag_: "long description"
-resource_tags:
-  _rtag_: "long description"
-claim_map:
-  _claim_:
-    - _ptag_
-uri_map:
-  _uri_:
-    - _rtag_
+principal-tags:
+  <ptag>: "name[|description]"
+  EXMP: Example|Four-char alphanumeric code (case-sensitive) + human-readable name and description
+  NamO: Name Only
+resource-tags:
+  <rtag>: "name[|description]"
+claim-map:
+  <claim>:
+    - <ptag>
+uri-map:
+  <uri>:
+    - <rtag>
 policies:
-  _group_:
-    - _policy_
-
+  <group>:
+    - <policy>
