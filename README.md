@@ -1,22 +1,16 @@
 # data-mesh-yaml
-Collaboration as Code for Ubiquitous Data Products
 
-ONLY for Quilt-mediated access 
+## Collaboration as Code for Ubiquitous Data Products
+
+ONLY for Quilt-mediated access
+
 - Do NOT worry about AWS Users
 - Only for Quilt SSO AssumeRole
 - Managed entirely via Quilt Admin
-- Tags viewed in Quilt Catalog
+- Maps [JWT claims](https://auth0.com/docs/secure/tokens/json-web-tokens/json-web-token-claims) to Tags
+- Tags and polices can be viewed/edited in Quilt Catalog
 
-Two sets of tags
-- Principals | Resources
-- four-char alphanum code: Human-readable long string
-- Always a "|list|"
+## Contents
 
-Three Mappings:
-- [JWT claims](https://auth0.com/docs/secure/tokens/json-web-tokens/json-web-token-claims) to Principal Tags
-- Policy: Principal Tags to Resource Tags
-- Resource Tags to Objects
-  - physical S3 URIs (Buckets, Keys)
-  - logical Quilt+ URIs (Package, Path) 
-
-[Example Configuration File](./data-mesh.yaml)
+- [Design Proposal](./TBAC.md)
+- [Example Configuration File](./data-mesh.yaml)

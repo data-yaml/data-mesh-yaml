@@ -1,20 +1,32 @@
-data-mesh-yaml: 0.1.0
+data-mesh-yaml: 0.1.1
 info:
-  mesh-name: <Mesh>
-  org-name: <Org>
-  version: 1.0
-principal-tags:
-  <ptag>: "name[|description]"
-  EXMP: Example|Four-char alphanumeric code (case-sensitive) + human-readable name and description
-  NamO: Name Only
-resource-tags:
-  <rtag>: "name[|description]"
-claim-map:
-  <claim>:
-    - <ptag>
-uri-map:
-  <uri>:
-    - <rtag>
+  name: MyProject
+  org: MyCompany
+  version: 0.9
+tags:
+  key1:
+  - value1
+  - value2
+  key2:
+  - valueA
+  - valueB
+claims:
+  claim1:
+    key1: value1
+  claim2:
+    key2:
+    - valueA
+    - valueB
 policies:
-  <group>:
-    - <policy>
+  policy1:
+    valueEquals:
+      key: key1
+  policy2:
+    effect: allowReadWrite
+    valueLike:
+      key: key2
+      pattern: value?
+  policy3:
+    effect: allowTagEdit
+    hasKeys:
+          - key2
