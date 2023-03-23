@@ -32,17 +32,21 @@ One common pattern to work around the 10-tag limit is emulating multiple values 
 [Sample data-mesh.yaml](./data-mesh.yaml)
 
 1. Specify configuration via a YAML file (`data-mesh.yaml`) modeled after Swagger
-2. Explicitly define valid tag keys and values, which may be used by both principals and resources
-3. Explicitly specify the mapping from JWT claims (derived from the SSO) onto various tags
-4. Provide a small set of YAML-based policy primitives to express which combinations of principal tags do (or do not) have access to particular combinations of resource tags
-    1. valueEquals
-    1. valueLike
-    1. hasKey
-5. Develop an open source 'policy compiler' that generates a reproducible CFT template. 
+1. Explicitly define valid tag keys and values, which may be used by both principals and resources
+1. Explicitly specify the mapping from JWT claims (derived from the SSO) onto various tags
+1. ONLY create policies that ALLOW access
+    1. Requires the user already have bucket-level Access
+    1. Highly sensitive files should be on restricted buckets
+    1. User-level DENY is handled by SSO
+1. Provide a small set of YAML-based policy primitives to express which combinations of principal tags ALLOW access to particular combinations of resource tags
+    1. valueEquals: for a given key, resource tag value matches principal tag value
+    1. valueLike: for a given key, resource tag matches the specific pattern
+    1. hasKey: resource has a tag containing one of these keys
+1. Develop an open source 'policy compiler' that generates a reproducible CFT template.
     1. Should also validate correctness
     2. Could optionally compress long names into short identifiers to avoid the 256-character limit.
     3. Can definitely predict which claims can access a given resource tag set.
-6. Enhance the Quilt Catalog to view/edit the per-stack `data-mesh.yaml`
+1. Enhance the Quilt Catalog to view/edit the per-stack `data-mesh.yaml`
     1. Should always validate edits
     2. Might possibly trigger policy recompilation.
 
