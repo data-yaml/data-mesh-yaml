@@ -50,6 +50,13 @@ One common pattern to work around the 10-tag limit is emulating multiple values 
     1. Should always validate edits
     2. Might possibly trigger policy recompilation.
 
+## Open Questions
+
+1. Should we encourage/discourage customers from "manually" adding tags directly from AWS?
+1. Should we _require_ always storing "multiple values per tag key"?
+    1. If so, should we constrain tag values to, e.g., 16 characters?
+    1. Or, should we always compress them to human-readable OR opaque identifiers?
+
 ## References
 
 - <https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html>
