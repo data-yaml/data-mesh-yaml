@@ -35,6 +35,7 @@ One common pattern to work around the 10-tag limit is emulating multiple values 
 1. Explicitly define valid tag keys and values, which may be used by both principals and resources
 1. Explicitly specify the mapping from JWT claims (derived from the SSO) onto various tags
 1. ONLY create policies that ALLOW access
+    1. Allow-able permissions: Read* | Write | ModifyTag
     1. Requires the user already have bucket-level Access
     1. Highly sensitive files should be on restricted buckets
     1. User-level DENY is handled by SSO

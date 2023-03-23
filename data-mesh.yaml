@@ -27,6 +27,6 @@ policies:
       key: key2
       pattern: value?
   policy3:
-    effect: allowTagEdit
+    effect: allowModifyTag
     hasKeys:
           - key2
