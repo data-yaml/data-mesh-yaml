@@ -61,6 +61,7 @@ One common pattern to work around the 10-tag limit is emulating multiple values 
 
 ## References
 
+- <https://awscli.amazonaws.com/v2/documentation/api/latest/reference/resourcegroupstaggingapi/tag-resources.html>
 - <https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html>
 - <https://docs.aws.amazon.com/AmazonS3/latest/userguide/object-tagging.html>
 - <https://docs.aws.amazon.com/IAM/latest/UserGuide/access_iam-tags.html>
