@@ -19,11 +19,11 @@ claims:
     - valueB
 policies:
   policy1:
-    valueEquals:
+    matchPrincipalValue:
       key: key1
   policy2:
     effect: allowReadWrite
-    valueLike:
+    matchPattern:
       key: key2
       pattern: value?
   policy3:
