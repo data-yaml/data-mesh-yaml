@@ -12,13 +12,13 @@ and managing tags.
 
 The key design challenges are:
 
-1. You can only associate 10 tags (each a single key-value pair) per object
+1. You can only associate 50 tags (each a single key-value pair) per object
 2. Each tag key can only be 128 case-sensitive unicode characters, and each tag value 256
 3. Resource tags are stored as tag key-value pairs. A resource tag key can [only] have a single value in a given tag
 4. Tag identifiers may disallow characters allowed by the customer's SSO systems
 5. Tag semantics are very limited (e.g., "Equals" and "Like", "ForAny" and "ForAll")  
 
-One common pattern to work around the 10-tag limit is emulating multiple values per tag key with a "|val1|val2|" list, since LIKE "|val1|" is well-defined if we don't allow "|" in names.
+One common pattern to work around the 50-tag limit is emulating multiple values per tag key with a "|val1|val2|" list, since LIKE "|val1|" is well-defined if we don't allow "|" in names.
 
 ## Design Goals
 
